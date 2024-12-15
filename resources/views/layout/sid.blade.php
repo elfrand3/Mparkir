@@ -1,4 +1,4 @@
-<div class="nk-sidebar">           
+<div class="nk-sidebar">
             <div class="nk-nav-scroll">
                 <ul class="metismenu" id="menu">
                     <li class="nav-label">Dashboard</li>
@@ -7,7 +7,8 @@
                             <i class="icon-speedometer menu-icon"></i><span class="nav-text">Dashboard</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="./index.html">Home 1</a></li>
+                            <li><a class="menu-link {{ request()->is('home*') ? 'active' : '' }}"
+                                href="{{ url('/home') }}">Home 1</a></li>
                             <li><a href="./index.html">Home 2</a></li>
                             <!-- <li><a href="./index-2.html">Home 2</a></li> -->
                         </ul>
@@ -25,8 +26,8 @@
                             <li><a href="./layout-horizontal.html">Horizontal</a></li>
                             <li><a href="./layout-boxed.html">Boxed</a></li>
                             <li><a href="./layout-wide.html">Wide</a></li>
-                            
-                            
+
+
                             <li><a href="./layout-fixed-header.html">Fixed Header</a></li>
                             <li><a href="layout-fixed-sidebar.html">Fixed Sidebar</a></li>
                         </ul>

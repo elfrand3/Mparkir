@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    
+
     <!-- theme meta -->
     <meta name="theme-name" content="quixlab" />
-  
+
     <title>Quixlab - Bootstrap Admin Dashboard Template by Themefisher.com</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
@@ -38,7 +38,7 @@
         Preloader end
     ********************-->
 
-    
+
     <!--**********************************
         Main wrapper start
     ***********************************-->
@@ -65,7 +65,7 @@
         <!--**********************************
             Header start
         ***********************************-->
-        
+
         <!--**********************************
             Header end ti-comment-alt
         ***********************************-->
@@ -87,36 +87,38 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="card gradient-1">
                             <div class="card-body">
-                                <h3 class="card-title text-white">Products Sold</h3>
+                                <h3 class="card-title text-white">TIME</h3>
                                 <div class="d-inline-block">
-                                    <h2 class="text-white">4565</h2>
-                                    <p class="text-white mb-0">Jan - March 2019</p>
+                                    <h2 class="text-white" id="current-time">00:00:00</h2>
+                                    <p class="text-white mb-0" id="current-date">Loading...</p>
                                 </div>
-                                <span class="float-right display-5 opacity-5"><i class="fa fa-shopping-cart"></i></span>
+                                <span class="float-right display-5 opacity-5"><i class="fa fa-clock-o" style="font-size:70px"></i></span>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6">
                         <div class="card gradient-2">
                             <div class="card-body">
-                                <h3 class="card-title text-white">Net Profit</h3>
+                                <h3 class="card-title text-white">Parkir Mobil</h3>
                                 <div class="d-inline-block">
-                                    <h2 class="text-white">$ 8541</h2>
-                                    <p class="text-white mb-0">Jan - March 2019</p>
+                                    <h2 class="text-white">30 <i class="fa fa-car" style="margin-left: 5px;"></i></h2>
+                                    <p class="text-white mb-0">Satuan Harga : Rp.5000 </p>
+                                    <p class="text-white mb-0">Total : Rp.150000 </p>
                                 </div>
-                                <span class="float-right display-5 opacity-5"><i class="fa fa-money"></i></span>
+                                <span class="float-right display-5 opacity-5"><i class="fa fa-money" style="font-size:70px"></i></span>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6">
                         <div class="card gradient-3">
                             <div class="card-body">
-                                <h3 class="card-title text-white">New Customers</h3>
+                                <h3 class="card-title text-white">Parkir Motor</h3>
                                 <div class="d-inline-block">
-                                    <h2 class="text-white">4565</h2>
-                                    <p class="text-white mb-0">Jan - March 2019</p>
+                                    <h2 class="text-white">10<i class="fa fa-motorcycle" style="margin-left: 5px;"></i></h2>
+                                    <p class="text-white mb-0">Satuan Harga : Rp.2000 </p>
+                                    <p class="text-white mb-0">Total : Rp.20000 </p>
                                 </div>
-                                <span class="float-right display-5 opacity-5"><i class="fa fa-users"></i></span>
+                                <span class="float-right display-5 opacity-5"><i class="fa fa-money" style="font-size:70px"></i></span>
                             </div>
                         </div>
                     </div>
@@ -178,7 +180,7 @@
                     </div>
                 </div>
 
-                
+
 
                 <div class="row">
                         <div class="col-lg-6 col-md-12">
@@ -188,8 +190,8 @@
                                     <div id="morris-bar-chart"></div>
                                 </div>
                             </div>
-                            
-                        </div>    
+
+                        </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="card card-widget">
                                 <div class="card-body">
@@ -222,7 +224,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="card">
@@ -247,7 +249,7 @@
                             </div>
                         </div>
                     </div>
-                
+
                 <div class="row">
                     <div class="col-lg-3 col-sm-6">
                         <div class="card">
@@ -427,7 +429,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>                        
+                        </div>
                     </div>
                 </div>
 
@@ -533,14 +535,14 @@
                             <div class="card-body">
                                     <h4 class="card-title mb-0">Store Location</h4>
                                 <div id="world-map" style="height: 470px;"></div>
-                            </div>        
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                
 
-                <div class="row">
+
+                {{-- <div class="row">
                         <div class="col-lg-3 col-sm-6">
                             <div class="card">
                                 <div class="social-graph-wrapper widget-facebook">
@@ -626,14 +628,14 @@
                             </div>
                         </div>
                     </div>
-            </div>
+            </div> --}}
             <!-- #/ container -->
         </div>
         <!--**********************************
             Content body end
         ***********************************-->
-        
-        
+
+
         <!--**********************************
             Footer start
         ***********************************-->
@@ -681,6 +683,46 @@
 
     <script src="./js/dashboard/dashboard-1.js"></script>
 
+    <script>
+        // Fungsi untuk mendapatkan nama bulan
+        function getMonthName(monthIndex) {
+            const monthNames = [
+                "January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"
+            ];
+            return monthNames[monthIndex];
+        }
+
+        // Fungsi untuk memperbarui waktu dan tanggal
+        function updateTimeAndDate() {
+            const now = new Date();
+
+            // Waktu
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const timeString = `${hours}:${minutes}:${seconds}`;
+
+            // Tanggal
+            const day = now.getDate();
+            const month = getMonthName(now.getMonth());
+            const year = now.getFullYear();
+            const dateString = `${day} ${month} ${year}`;
+
+            // Masukkan waktu dan tanggal ke elemen HTML
+            document.getElementById("current-time").innerText = timeString;
+            document.getElementById("current-date").innerText = dateString;
+
+            // Masukkan tanggal di tempat ikon
+            document.getElementById("date-icon").innerHTML = `<i class="fa fa-calendar"></i> ${day}/${now.getMonth() + 1}/${year}`;
+        }
+
+        // Perbarui setiap detik
+        setInterval(updateTimeAndDate, 1000);
+
+        // Jalankan pertama kali
+        updateTimeAndDate();
+    </script>
 </body>
 
 </html>

@@ -8,7 +8,7 @@
                         </a>
                         <ul aria-expanded="false">
                             <li><a class="menu-link {{ request()->is('home*') ? 'active' : '' }}"
-                                href="{{ url('/home') }}">Home 1</a></li>
+                                href="{{ url('/home') }}">Monitoring</a></li>
                             <li><a href="./index.html">Home 2</a></li>
                             <!-- <li><a href="./index-2.html">Home 2</a></li> -->
                         </ul>

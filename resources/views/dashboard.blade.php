@@ -89,10 +89,10 @@
                             <div class="card-body">
                                 <h3 class="card-title text-white">TIME</h3>
                                 <div class="d-inline-block">
-                                    <h2 class="text-white" id="current-time">00:00:00</h2>
+                                    <h2 class="text-white" id="current-time">00:00:00 </h2>
                                     <p class="text-white mb-0" id="current-date">Loading...</p>
                                 </div>
-                                <span class="float-right display-5 opacity-5"><i class="fa fa-clock-o" style="font-size:70px"></i></span>
+                                <span class="float-right display-5 opacity-5"><i class="fa fa-clock-o"></i></span>
                             </div>
                         </div>
                     </div>
@@ -105,7 +105,7 @@
                                     <p class="text-white mb-0">Satuan Harga : Rp.5000 </p>
                                     <p class="text-white mb-0">Total : Rp.150000 </p>
                                 </div>
-                                <span class="float-right display-5 opacity-5"><i class="fa fa-money" style="font-size:70px"></i></span>
+                                {{-- <span class="float-right display-5 opacity-5"><i class="fa fa-money"></i></span> --}}
                             </div>
                         </div>
                     </div>
@@ -118,7 +118,7 @@
                                     <p class="text-white mb-0">Satuan Harga : Rp.2000 </p>
                                     <p class="text-white mb-0">Total : Rp.20000 </p>
                                 </div>
-                                <span class="float-right display-5 opacity-5"><i class="fa fa-money" style="font-size:70px"></i></span>
+                                {{-- <span class="float-right display-5 opacity-5"><i class="fa fa-money" style="font-size:70px"></i></span> --}}
                             </div>
                         </div>
                     </div>

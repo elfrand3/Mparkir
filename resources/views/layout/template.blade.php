@@ -122,8 +122,8 @@
                             <i class="icon-notebook menu-icon"></i><span class="nav-text">Rekap</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="./page-login.html">Login</a></li>
-                            <li><a href="./page-register.html">Register</a></li>
+                            <li><a href="{{url('/hari')}}">Data Pendapatan Perhari</a></li>
+                            <li><a href="{{url('/bulan')}}">Data Pendapatan Perbulan</a></li>
                         </ul>
                     </li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">

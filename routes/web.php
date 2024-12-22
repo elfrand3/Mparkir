@@ -25,3 +25,5 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class,'dashboard']);
 Route::get('/user', [HomeController::class,'user']);
+Route::get('/hari', [HomeController::class,'hari']);
+Route::get('/bulan', [HomeController::class,'bulan']);

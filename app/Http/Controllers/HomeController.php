@@ -9,6 +9,12 @@ class HomeController extends Controller
     public function dashboard(){
         return view('dashboard');
     }
+    public function hari(){
+        return view('hari');
+    }
+    public function bulan(){
+        return view('bulan');
+    }
     public function user(){
 
         $data = User::get();

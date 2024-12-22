@@ -1,5 +1,5 @@
 <div class="nk-sidebar">
-            <div class="nk-nav-scroll">
+    <div class="nk-nav-scroll">
                 <ul class="metismenu" id="menu">
                     <li class="nav-label">Dashboard</li>
                     <li>
@@ -61,5 +61,5 @@
                         </ul>
                     </li>
                 </ul>
-            </div>
-        </div>
+    </div>
+</div>

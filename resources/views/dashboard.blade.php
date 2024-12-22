@@ -52,7 +52,7 @@
                     <b class="logo-abbr"><img src="{{asset('template/images/logo.png')}}" alt=""> </b>
                     <span class="logo-compact"><img src="{{asset('template/images/logo-compact.png')}}" alt=""></span>
                     <span class="brand-title">
-                        <img src="{{asset('template/images/logo-text.png')}}" alt="">
+                        <img src="{{asset('template/images/logo-rs.png')}}" width="160" height="40">
                     </span>
                 </a>
             </div>

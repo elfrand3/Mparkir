@@ -4,7 +4,7 @@
     <div class="col p-md-0">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
-            <li class="breadcrumb-item active"><a href="javascript:void(0)">Home</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Monitoring</a></li>
         </ol>
     </div>
 </div>
@@ -46,6 +46,17 @@
                             <p class="text-white mb-0">Total : Rp.20000 </p>
                         </div>
                         {{-- <span class="float-right display-5 opacity-5"><i class="fa fa-money" style="font-size:70px"></i></span> --}}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Bar Chart -->
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Income Graph</h4>
+                            <canvas id="barChart" width="500" height="250"></canvas>
+                        </div>
                     </div>
                 </div>
             </div>

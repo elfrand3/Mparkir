@@ -19,6 +19,10 @@
     <link rel="stylesheet" href="{{asset('template/plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css')}}">
     <!-- Custom Stylesheet -->
     <link href="{{asset('template/css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('template/plugins/tables/css/datatable/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -48,7 +52,7 @@
         ***********************************-->
         <div class="nav-header">
             <div class="brand-logo">
-                <a href="dashboard">
+                <a href="{{url('/')}}">
                     <b class="logo-abbr"><img src="{{asset('template/images/logo.png')}}" alt=""> </b>
                     <span class="logo-compact"><img src="{{asset('template/images/logo-compact.png')}}" alt=""></span>
                     <span class="brand-title">
@@ -73,19 +77,6 @@
                 <div class="nav-control">
                     <div class="hamburger">
                         <span class="toggle-icon"><i class="icon-menu"></i></span>
-                    </div>
-                </div>
-                <div class="header-left">
-                    <div class="input-group icons">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text bg-transparent border-0 pr-2 pr-sm-3" id="basic-addon1"><i class="mdi mdi-magnify"></i></span>
-                        </div>
-                        <input type="search" class="form-control" placeholder="Search Dashboard" aria-label="Search Dashboard">
-                        <div class="drop-down animated flipInX d-md-none">
-                            <form action="#">
-                                <input type="text" class="form-control" placeholder="Search">
-                            </form>
-                        </div>
                     </div>
                 </div>
                 <div class="header-right">
@@ -119,11 +110,10 @@
                     <li class="nav-label">Aplikasi Parkir Rs. Rizani</li>
                     <li>
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="icon-speedometer menu-icon"></i><span class="nav-text">Dashboard</span>
+                            <i class="icon-home menu-icon"></i><span class="nav-text">Dashboard</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a class="menu-link {{ request()->is('home*') ? 'active' : '' }}"
-                                href="{{ url('/home') }}">Monitoring</a></li>
+                            <li><a href="{{url('/')}}">Monitoring</a></li>
                             <!-- <li><a href="./index-2.html">Home 2</a></li> -->
                         </ul>
                     </li>
@@ -134,24 +124,13 @@
                         <ul aria-expanded="false">
                             <li><a href="./page-login.html">Login</a></li>
                             <li><a href="./page-register.html">Register</a></li>
-                            <li><a href="./page-lock.html">Lock Screen</a></li>
-                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Error</a>
-                                <ul aria-expanded="false">
-                                    <li><a href="./page-error-404.html">Error 404</a></li>
-                                    <li><a href="./page-error-403.html">Error 403</a></li>
-                                    <li><a href="./page-error-400.html">Error 400</a></li>
-                                    <li><a href="./page-error-500.html">Error 500</a></li>
-                                    <li><a href="./page-error-503.html">Error 503</a></li>
-                                </ul>
-                            </li>
                         </ul>
                     </li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="icon-user menu-icon"></i><span class="nav-text">User</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="./table-basic.html" aria-expanded="false">Basic Table</a></li>
-                            <li><a href="./table-datatable.html" aria-expanded="false">Data Table</a></li>
+                            <li><a href="{{ url('/user') }}" aria-expanded="false">Data Users</a></li>
                         </ul>
                     </li>
                     <li>
@@ -212,9 +191,16 @@
     <script src="{{asset('template/plugins/chartist/js/chartist.min.js')}}"></script>
     <script src="{{asset('template/plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js')}}"></script>
 
-
+    <script src="{{asset('template/plugins/chart.js/Chart.bundle.min.js')}}"></script>
+    <script src="{{asset('template/js/plugins-init/chartjs-init.js')}}"></script>
+    <script src="{{asset('template/plugins/tables/js/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('template/plugins/tables/js/datatable/dataTables.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('template/plugins/tables/js/datatable-init/datatable-basic.min.js')}}"></script>
 
     <script src="{{asset('template/js/dashboard/dashboard-1.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/metismenu/dist/metisMenu.min.js"></script>
+
+
 
     <script>
         // Fungsi untuk mendapatkan nama bulan

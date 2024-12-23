@@ -12,7 +12,7 @@
     <div class="container-fluid mt-3 ml-4">
         <div class="row">
             <div class="col-lg-3 col-sm-6">
-                <div class="card gradient-1">
+                <div class="card gradient-6">
                     <div class="card-body">
                         <h3 class="card-title text-white">REALTIME</h3>
                         <div class="d-inline-block mb-1">
@@ -23,8 +23,24 @@
                     </div>
                 </div>
             </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="card gradient-5">
+                    <div class="card-body">
+                        <h3 class="card-title text-white">Total Kendaraan</h3>
+                        <div class="d-inline-block">
+                            <h2 class="text-white">70 Kendaraan
+                                <i class="fa fa-car" style="margin-left: 5px;"></i>
+                                <i class="fa fa-motorcycle" style="margin-left: 5px;"></i>
+                            </h2>
+                            <p class="text-white mb-0">Motor : 50 </p>
+                            <p class="text-white mb-0">Mobil : 20 </p>
+                        </div>
+                        {{-- <span class="float-right display-5 opacity-5"><i class="fa fa-money"></i></span> --}}
+                    </div>
+                </div>
+            </div>
             <div class="col-lg-4 col-sm-8">
-                <div class="card gradient-2">
+                <div class="card gradient-9">
                     <div class="card-body">
                         <h3 class="card-title text-white">Total Pendapatan</h3>
                         <div class="d-inline-block">

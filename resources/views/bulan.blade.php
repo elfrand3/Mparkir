@@ -20,21 +20,16 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Date</th>
-                                        <th>Start</th>
-                                        <th>End Start</th>
+                                        <th>Tanggal</th>
                                         <th>Motor</th>
                                         <th>Mobil</th>
-                                        <th>Nominal</th>
+                                        <th>Total Pendapatan</th>
                                         {{-- <th>Country</th> --}}
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td>08:00</td>
-                                        <td>12:00</td>
-                                        {{-- <td><span class="label gradient-1 rounded">Paid</span> --}}
                                         <td><span class="text-muted">Oct 16, 2024</span></td>
                                         <td><span class="label gradient-1 rounded">20</span></td>
                                         <td><span class="label gradient-1 rounded">10</span></td>
@@ -42,9 +37,6 @@
                                     </tr>
                                     <tr>
                                         <td>2</td>
-                                        <td>18:00</td>
-                                        <td>8:00</td>
-                                        {{-- <td><span class="label gradient-1 rounded">Paid</span> --}}
                                         <td><span class="text-muted">Oct 17, 2024</span></td>
                                         <td><span class="label gradient-1 rounded">10</span></td>
                                         <td><span class="label gradient-1 rounded">20</span></td>

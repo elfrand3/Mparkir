@@ -11,8 +11,8 @@
 <div class="content-body">
     <div class="container-fluid mt-3 ml-4">
         <div class="row">
-            <div class="col-lg-3 col-sm-6">
-                <div class="card gradient-1">
+            <div class="col-lg-4 col-sm-6">
+                <div class="card gradient-6">
                     <div class="card-body">
                         <h3 class="card-title text-white">REALTIME</h3>
                         <div class="d-inline-block mb-1">
@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
-                <div class="card gradient-2">
+                <div class="card gradient-9">
                     <div class="card-body">
                         <h3 class="card-title text-white">Parkir Mobil</h3>
                         <div class="d-inline-block">
@@ -37,7 +37,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
-                <div class="card gradient-3">
+                <div class="card gradient-5">
                     <div class="card-body">
                         <h3 class="card-title text-white">Parkir Motor</h3>
                         <div class="d-inline-block">

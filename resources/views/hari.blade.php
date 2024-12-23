@@ -45,10 +45,11 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Jenis Kendaraan</th>
                                         <th>Date</th>
                                         <th>Start</th>
                                         <th>End Start</th>
+                                        <th>Jenis Kendaraan</th>
+                                        <th>Jumlah Kendaraan</th>
                                         <th>Nominal</th>
                                         {{-- <th>Country</th> --}}
                                     </tr>
@@ -56,25 +57,26 @@
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td><span class="label gradient-1 rounded">Motor</span></td>
                                         <td><span class="text-muted">Oct 16, 2017</span>
                                         </td>
                                         <td>10:00</td>
                                         <td>12:00</td>
                                         {{-- <td><span class="label gradient-1 rounded">Paid</span> --}}
                                         </td>
-                                        <td>Rp.15000</td>
+                                        <td><span class="label gradient-1 rounded">Motor</span></td>
+                                        <td><span class="label gradient-1 rounded">6</span></td>
+                                        <td>Rp. 18000</td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
-                                        <td><span class="label gradient-1 rounded">Mobil</span></td>
                                         <td><span class="text-muted">Oct 16, 2017</span>
                                         </td>
                                         <td>08:00</td>
                                         <td>12:00</td>
                                         {{-- <td><span class="label gradient-1 rounded">Paid</span> --}}
-                                        </td>
-                                        <td>Rp.15000</td>
+                                        <td><span class="label gradient-1 rounded">Mobil</span></td>
+                                        <td><span class="label gradient-1 rounded">5</span></td>
+                                        <td>Rp. 25000</td>
                                     </tr>
                                 </tbody>
                             </table>

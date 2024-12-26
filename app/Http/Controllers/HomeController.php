@@ -8,13 +8,20 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function dashboard(){
-        return view('dashboard');
+        $data = dt_parkir::get();
+        return view('dashboard', compact('data'));
     }
     public function hari(){
 
         $data = dt_parkir::get();
-
-        return view('hari', compact('data'));
+        
+        $total = 0;
+        foreach ($data as $item) {
+            $total += ($item->motor * $item->sh_motor) + ($item->mobil * $item->sh_mobil);
+        }
+    
+        // Kirim data dan total ke view
+        return view('hari', compact('data', 'total'));
     }
     public function bulan(){
 

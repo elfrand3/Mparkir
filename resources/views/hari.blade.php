@@ -44,7 +44,11 @@
                     <div class="card-body">
                         <h3 class="card-title text-white">Total Pendapatan</h3>
                         <div class="d-inline-block">
-                            <h2 class="text-white">Rp. {{($data->first()->motor*$data->first()->sh_motor)+($data->first()->mobil*$data->first()->sh_mobil)}}<i class="fa fa-money" style="margin-left: 5px;"></i></h2>
+                            <h2 class="text-white">
+                                Rp. {{ number_format($total, 0, ',', '.') }}
+                                <i class="fa fa-money" style="margin-left: 5px;"></i>
+                            </h2>
+                            
                             <p class="text-white mb-0">Motor : Rp. {{$data->first()->motor*$data->first()->sh_motor}} </p>
                             <p class="text-white mb-0">Mobil : Rp. {{$data->first()->mobil*$data->first()->sh_mobil}} </p>
                         </div>

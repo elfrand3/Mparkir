@@ -64,36 +64,29 @@
                                         <th>Date</th>
                                         <th>Start</th>
                                         <th>End Start</th>
-                                        <th>Jenis Kendaraan</th>
+                                        <th>Mobil</th>
+                                        <th>Motor</th>
                                         <th>Jumlah Kendaraan</th>
-                                        <th>Nominal</th>
+                                        <th>Total Pendapatan</th>
                                         {{-- <th>Country</th> --}}
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($data as $d )
                                     <tr>
-                                        <td>1</td>
+                                        <td>{{ $loop->iteration }}</td>
                                         <td><span class="text-muted">Oct 16, 2017</span>
                                         </td>
                                         <td>10:00</td>
                                         <td>12:00</td>
                                         {{-- <td><span class="label gradient-1 rounded">Paid</span> --}}
                                         </td>
-                                        <td><span class="label gradient-1 rounded">Motor</span></td>
-                                        <td><span class="label gradient-1 rounded">6</span></td>
-                                        <td>Rp. 18000</td>
+                                        <td><span class="label gradient-1 rounded">{{$d->mobil}}</span></td>
+                                        <td><span class="label gradient-1 rounded">{{$d->motor}}</span></td>
+                                        <td>{{$d->mobil + $d->motor}} Kendaraan</td>
+                                        <td>Rp. {{($d->mobil*$d->sh_mobil) + ($d->motor*$d->sh_motor)}}</td>
                                     </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td><span class="text-muted">Oct 16, 2017</span>
-                                        </td>
-                                        <td>08:00</td>
-                                        <td>12:00</td>
-                                        {{-- <td><span class="label gradient-1 rounded">Paid</span> --}}
-                                        <td><span class="label gradient-1 rounded">Mobil</span></td>
-                                        <td><span class="label gradient-1 rounded">5</span></td>
-                                        <td>Rp. 25000</td>
-                                    </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

@@ -8,7 +8,9 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function dashboard(){
-        return view('dashboard');
+
+        $data = dt_parkir::get();
+        return view('dashboard', compact('data'));
     }
     public function hari(){
 

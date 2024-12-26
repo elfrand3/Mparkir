@@ -28,9 +28,9 @@
                     <div class="card-body">
                         <h3 class="card-title text-white">Parkir Mobil</h3>
                         <div class="d-inline-block">
-                            <h2 class="text-white">30 <i class="fa fa-car" style="margin-left: 5px;"></i></h2>
-                            <p class="text-white mb-0">Satuan Harga : Rp.5000 </p>
-                            <p class="text-white mb-0">Total : Rp.150000 </p>
+                            <h2 class="text-white">{{$data->first()->mobil}} <i class="fa fa-car" style="margin-left: 5px;"></i></h2>
+                            <p class="text-white mb-0">Satuan Harga : Rp. {{$data->first()->sh_mobil}} </p>
+                            <p class="text-white mb-0">Total : Rp. {{$data->first()->mobil*$data->first()->sh_mobil}} </p>
                         </div>
                         {{-- <span class="float-right display-5 opacity-5"><i class="fa fa-money"></i></span> --}}
                     </div>
@@ -41,9 +41,9 @@
                     <div class="card-body">
                         <h3 class="card-title text-white">Parkir Motor</h3>
                         <div class="d-inline-block">
-                            <h2 class="text-white">10<i class="fa fa-motorcycle" style="margin-left: 5px;"></i></h2>
-                            <p class="text-white mb-0">Satuan Harga : Rp.2000 </p>
-                            <p class="text-white mb-0">Total : Rp.20000 </p>
+                            <h2 class="text-white">{{$data->first()->motor}} <i class="fa fa-motorcycle" style="margin-left: 5px;"></i></h2>
+                            <p class="text-white mb-0">Satuan Harga : Rp. {{$data->first()->sh_motor}}  </p>
+                            <p class="text-white mb-0">Total : Rp. {{$data->first()->motor*$data->first()->sh_motor}} </p>
                         </div>
                         {{-- <span class="float-right display-5 opacity-5"><i class="fa fa-money" style="font-size:70px"></i></span> --}}
                     </div>

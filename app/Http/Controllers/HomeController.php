@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\User;
+use App\Models\dt_parkir;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -10,7 +11,10 @@ class HomeController extends Controller
         return view('dashboard');
     }
     public function hari(){
-        return view('hari');
+
+        $data = dt_parkir::get();
+
+        return view('hari', compact('data'));
     }
     public function bulan(){
         return view('bulan');

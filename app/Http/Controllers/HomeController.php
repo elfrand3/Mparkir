@@ -17,7 +17,8 @@ class HomeController extends Controller
         return view('hari', compact('data'));
     }
     public function bulan(){
-        return view('bulan');
+        $data = dt_parkir::get();
+        return view('bulan',compact('data'));
     }
     public function user(){
 

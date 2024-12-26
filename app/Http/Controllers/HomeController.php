@@ -9,17 +9,17 @@ class HomeController extends Controller
 {
     public function dashboard(){
         $data = dt_parkir::get();
-        $tmt = 0;
-        $tmb = 0;
-        $tpt = 0;
-        $tpb = 0;
+        $total_motor = 0;
+        $total_mobil = 0;
+        $total_pendapatan_motor = 0;
+        $total_pendapatan_mobil = 0;
         foreach ($data as $item) {
-            $tmt += ($item->motor );
-            $tmb += ($item->mobil );
-            $tpt += ($item->motor * $item->sh_motor );
-            $tpb += ($item->mobil * $item->sh_mobil );
+            $total_motor += ($item->motor );
+            $total_mobil += ($item->mobil );
+            $total_pendapatan_motor += ($item->motor * $item->sh_motor );
+            $total_pendapatan_mobil += ($item->mobil * $item->sh_mobil );
         }
-        return view('dashboard', compact('data', 'tmt', 'tmb', 'tpt', 'tpb'));
+        return view('dashboard', compact('data', 'total_motor', 'total_mobil', 'total_pendapatan_motor', 'total_pendapatan_mobil'));
     }
     public function hari(){
 
@@ -27,21 +27,21 @@ class HomeController extends Controller
 
         $tp = 0;
         $tk = 0;
-        $tmt = 0;
-        $tmb = 0;
-        $tpt = 0;
-        $tpb = 0;
+        $total_motor = 0;
+        $total_mobil = 0;
+        $total_pendapatan_motor = 0;
+        $total_pendapatan_mobil = 0;
         foreach ($data as $item) {
             $tp += ($item->motor * $item->sh_motor) + ($item->mobil * $item->sh_mobil);
             $tk += ($item->motor + $item->mobil );
-            $tmt += ($item->motor );
-            $tmb += ($item->mobil );
-            $tpt += ($item->motor * $item->sh_motor );
-            $tpb += ($item->mobil * $item->sh_mobil );
+            $total_motor += ($item->motor );
+            $total_mobil += ($item->mobil );
+            $total_pendapatan_motor += ($item->motor * $item->sh_motor );
+            $total_pendapatan_mobil += ($item->mobil * $item->sh_mobil );
         }
 
         // Kirim data dan total ke view
-        return view('hari', compact('data', 'tp', 'tk', 'tpt', 'tpb', 'tmt', 'tmb'));
+        return view('hari', compact('data', 'tp', 'tk', 'total_pendapatan_motor', 'total_pendapatan_mobil', 'total_motor', 'total_mobil'));
     }
     public function bulan(){
 

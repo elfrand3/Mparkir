@@ -28,9 +28,9 @@
                     <div class="card-body">
                         <h3 class="card-title text-white">Parkir Mobil</h3>
                         <div class="d-inline-block">
-                            <h2 class="text-white">{{ number_format($tmb)}} <i class="fa fa-car" style="margin-left: 5px;"></i></h2>
+                            <h2 class="text-white">{{ number_format($total_mobil)}} <i class="fa fa-car" style="margin-left: 5px;"></i></h2>
                             <p class="text-white mb-0">Satuan Harga : Rp. {{$data->first()->sh_mobil}} </p>
-                            <p class="text-white mb-0">Total : Rp. {{ number_format($tpb)}} </p>
+                            <p class="text-white mb-0">Total : Rp. {{ number_format($total_pendapatan_mobil)}} </p>
                         </div>
                         {{-- <span class="float-right display-5 opacity-5"><i class="fa fa-money"></i></span> --}}
                     </div>
@@ -41,9 +41,9 @@
                     <div class="card-body">
                         <h3 class="card-title text-white">Parkir Motor</h3>
                         <div class="d-inline-block">
-                            <h2 class="text-white">{{ number_format($tmt)}} <i class="fa fa-motorcycle" style="margin-left: 5px;"></i></h2>
+                            <h2 class="text-white">{{ number_format($total_motor)}} <i class="fa fa-motorcycle" style="margin-left: 5px;"></i></h2>
                             <p class="text-white mb-0">Satuan Harga : Rp. {{$data->first()->sh_motor}}  </p>
-                            <p class="text-white mb-0">Total : Rp. {{ number_format($tpt)}} </p>
+                            <p class="text-white mb-0">Total : Rp. {{ number_format($total_pendapatan_motor)}} </p>
                         </div>
                         {{-- <span class="float-right display-5 opacity-5"><i class="fa fa-money" style="font-size:70px"></i></span> --}}
                     </div>
@@ -94,11 +94,11 @@
 
     // Data untuk kolom mobil dan motor
     const labels = generateDynamicMonths(); // Labels bulan dinamis
-    const dataMobil = [{{ number_format($tmb)}}]; // Data untuk mobil
-    const dataMotor = [{{ number_format($tmt)}}]; // Data untuk motor
+    const dataMobil = [{{ number_format($total_mobil)}}]; // Data untuk mobil
+    const dataMotor = [{{ number_format($total_motor)}}]; // Data untuk motor
 
-    const pendapatanMobil = [{{ number_format($tpb)}}]; // Pendapatan mobil
-    const pendapatanMotor = [{{ number_format($tpt)}}];
+    const pendapatanMobil = [{{ number_format($total_pendapatan_mobil)}}]; // Pendapatan mobil
+    const pendapatanMotor = [{{ number_format($total_pendapatan_motor)}}];
 
     // Konfigurasi Chart.js
     const ctx = document.getElementById('barChart').getContext('2d');

@@ -32,8 +32,8 @@
                                 <i class="fa fa-car" style="margin-left: 5px;"></i>
                                 <i class="fa fa-motorcycle" style="margin-left: 5px;"></i>
                             </h2>
-                            <p class="text-white mb-0">Motor : {{ number_format($tmt)}} Kendaraan</p>
-                            <p class="text-white mb-0">Mobil : {{ number_format($tmb)}} Kendaraan</p>
+                            <p class="text-white mb-0">Motor : {{ number_format($total_motor)}} Kendaraan</p>
+                            <p class="text-white mb-0">Mobil : {{ number_format($total_mobil)}} Kendaraan</p>
                         </div>
                         {{-- <span class="float-right display-5 opacity-5"><i class="fa fa-money"></i></span> --}}
                     </div>
@@ -49,8 +49,8 @@
                                 <i class="fa fa-money" style="margin-left: 5px;"></i>
                             </h2>
 
-                            <p class="text-white mb-0">Motor : Rp. {{ number_format($tpt)}} </p>
-                            <p class="text-white mb-0">Mobil : Rp. {{ number_format($tpb)}} </p>
+                            <p class="text-white mb-0">Motor : Rp. {{ number_format($total_pendapatan_motor)}} </p>
+                            <p class="text-white mb-0">Mobil : Rp. {{ number_format($total_pendapatan_mobil)}} </p>
                         </div>
                         {{-- <span class="float-right display-5 opacity-5"><i class="fa fa-money"></i></span> --}}
                     </div>

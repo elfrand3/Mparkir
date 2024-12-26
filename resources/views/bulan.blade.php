@@ -50,6 +50,7 @@
         { no: 5, tanggal: "Oct 20, 2024", motor: 25, mobil: 20, total: 150000 },
         { no: 6, tanggal: "Oct 21, 2024", motor: 10, mobil: 10, total: 90000 },
         { no: 7, tanggal: "Oct 22, 2024", motor: 12, mobil: 14, total: 95000 },
+        
     ];
 
     const rowsPerPage = 5;

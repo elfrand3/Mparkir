@@ -9,19 +9,39 @@ class HomeController extends Controller
 {
     public function dashboard(){
         $data = dt_parkir::get();
-        return view('dashboard', compact('data'));
+        $tmt = 0;
+        $tmb = 0;
+        $tpt = 0;
+        $tpb = 0;
+        foreach ($data as $item) {
+            $tmt += ($item->motor );
+            $tmb += ($item->mobil );
+            $tpt += ($item->motor * $item->sh_motor );
+            $tpb += ($item->mobil * $item->sh_mobil );
+        }
+        return view('dashboard', compact('data', 'tmt', 'tmb', 'tpt', 'tpb'));
     }
     public function hari(){
 
         $data = dt_parkir::get();
-        
-        $total = 0;
+
+        $tp = 0;
+        $tk = 0;
+        $tmt = 0;
+        $tmb = 0;
+        $tpt = 0;
+        $tpb = 0;
         foreach ($data as $item) {
-            $total += ($item->motor * $item->sh_motor) + ($item->mobil * $item->sh_mobil);
+            $tp += ($item->motor * $item->sh_motor) + ($item->mobil * $item->sh_mobil);
+            $tk += ($item->motor + $item->mobil );
+            $tmt += ($item->motor );
+            $tmb += ($item->mobil );
+            $tpt += ($item->motor * $item->sh_motor );
+            $tpb += ($item->mobil * $item->sh_mobil );
         }
-    
+
         // Kirim data dan total ke view
-        return view('hari', compact('data', 'total'));
+        return view('hari', compact('data', 'tp', 'tk', 'tpt', 'tpb', 'tmt', 'tmb'));
     }
     public function bulan(){
 

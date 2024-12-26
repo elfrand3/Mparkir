@@ -28,12 +28,12 @@
                     <div class="card-body">
                         <h3 class="card-title text-white">Total Kendaraan</h3>
                         <div class="d-inline-block">
-                            <h2 class="text-white">{{($data->first()->motor)+($data->first()->mobil)}} Kendaraan
+                            <h2 class="text-white">{{ number_format($tk)}} Kendaraan
                                 <i class="fa fa-car" style="margin-left: 5px;"></i>
                                 <i class="fa fa-motorcycle" style="margin-left: 5px;"></i>
                             </h2>
-                            <p class="text-white mb-0">Motor : {{$data->first()->motor}} Kendaraan</p>
-                            <p class="text-white mb-0">Mobil : {{$data->first()->mobil}} Kendaraan</p>
+                            <p class="text-white mb-0">Motor : {{ number_format($tmt)}} Kendaraan</p>
+                            <p class="text-white mb-0">Mobil : {{ number_format($tmb)}} Kendaraan</p>
                         </div>
                         {{-- <span class="float-right display-5 opacity-5"><i class="fa fa-money"></i></span> --}}
                     </div>
@@ -45,12 +45,12 @@
                         <h3 class="card-title text-white">Total Pendapatan</h3>
                         <div class="d-inline-block">
                             <h2 class="text-white">
-                                Rp. {{ number_format($total, 0, ',', '.') }}
+                                Rp. {{ number_format($tp)}}
                                 <i class="fa fa-money" style="margin-left: 5px;"></i>
                             </h2>
-                            
-                            <p class="text-white mb-0">Motor : Rp. {{$data->first()->motor*$data->first()->sh_motor}} </p>
-                            <p class="text-white mb-0">Mobil : Rp. {{$data->first()->mobil*$data->first()->sh_mobil}} </p>
+
+                            <p class="text-white mb-0">Motor : Rp. {{ number_format($tpt)}} </p>
+                            <p class="text-white mb-0">Mobil : Rp. {{ number_format($tpb)}} </p>
                         </div>
                         {{-- <span class="float-right display-5 opacity-5"><i class="fa fa-money"></i></span> --}}
                     </div>

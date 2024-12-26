@@ -23,31 +23,22 @@
                                         <th>Tanggal</th>
                                         <th>Motor</th>
                                         <th>Mobil</th>
-                                        <th>Jumlah Kendaraan</th>
                                         <th>Total Pendapatan</th>
                                     </tr>
                                 </thead>
-                                @foreach ($data as $d )
+                                <tbody >
+                                    @foreach ($data as $d )
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td><span class="text-muted">Oct 16, 2017</span>
-                                        </td>
-                                        {{-- <td>10:00</td> --}}
-                                        {{-- <td>12:00</td> --}}
-                                        {{-- <td><span class="label gradient-1 rounded">Paid</span> --}}
-                                        </td>
+                                        <td><span class="text-muted">Oct 16, 2017</span></td>
                                         <td><span class="label gradient-1 rounded">{{$d->mobil}}</span></td>
                                         <td><span class="label gradient-1 rounded">{{$d->motor}}</span></td>
-                                        <td>{{$d->mobil + $d->motor}} Kendaraan</td>
                                         <td>Rp. {{($d->mobil*$d->sh_mobil) + ($d->motor*$d->sh_motor)}}</td>
                                     </tr>
                                     @endforeach
+                                </tbody>
                             </table>
                         </div>
-                        <nav>
-                            <ul class="pagination justify-content-end" id="pagination">
-                            </ul>
-                        </nav>
                     </div>
                 </div>
             </div>

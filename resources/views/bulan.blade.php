@@ -16,7 +16,7 @@
                     <div class="card-body">
                         <h4 class="card-title">Pendapatan/Perbulan</h4>
                         <div class="table-responsive">
-                            <table class="table header-border">
+                            <table class="table table-striped table-bordered zero-configuration">
                                 <thead>
                                     <tr>
                                         <th>No</th>

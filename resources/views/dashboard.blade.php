@@ -49,14 +49,11 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <!-- Bar Chart -->
-                <div class="col-lg-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">Income Graph</h4>
-                            <canvas id="barChart" width="500" height="250"></canvas>
-                        </div>
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Income Graph</h4>
+                        <canvas id="barChart" width="500" height="250"></canvas>
                     </div>
                 </div>
             </div>

@@ -39,22 +39,6 @@
                                 </tbody>
                             </table>
                         </div>
-            
-                        <nav>
-                            <ul class="pagination justify-content-end">
-                                <li class="page-item {{ $data->onFirstPage() ? 'disabled' : '' }}">
-                                    <a class="page-link" href="{{ $data->previousPageUrl() }}">Previous</a>
-                                </li>
-                                @for ($i = 1; $i <= $data->lastPage(); $i++)
-                                    <li class="page-item {{ $data->currentPage() == $i ? 'active' : '' }}">
-                                        <a class="page-link" href="{{ $data->url($i) }}">{{ $i }}</a>
-                                    </li>
-                                @endfor
-                                <li class="page-item {{ !$data->hasMorePages() ? 'disabled' : '' }}">
-                                    <a class="page-link" href="{{ $data->nextPageUrl() }}">Next</a>
-                                </li>
-                            </ul>
-                        </nav>
                     </div>
                 </div>
             </div>

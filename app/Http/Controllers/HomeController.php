@@ -19,7 +19,6 @@ class HomeController extends Controller
     public function bulan(){
 
         $data = dt_parkir::get();
-        $data = dt_parkir::paginate(1);
 
         return view('bulan', compact('data'));
     }
